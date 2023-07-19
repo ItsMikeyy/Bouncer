@@ -17,7 +17,10 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb2d.velocity = new Vector2(-platformSpeed, 0.0f);
+        if (!gm.playerHasDied)
+        {
+            rb2d.velocity = new Vector2(-platformSpeed, 0.0f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public bool hasStart = false;
+    public bool playerHasDied = false;
     public int score = 0;
     public TMP_Text scoreText;
     // Start is called before the first frame update
