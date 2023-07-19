@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
     // Start is called before the first frame update
+    public String gameObjectTag;
     void Start()
     {
         
@@ -18,6 +21,9 @@ public class Destroy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.tag == gameObjectTag)
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
