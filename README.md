@@ -1,2 +1,2 @@
 # Bouncer
-Endless runner game
+Flappy bird like game
