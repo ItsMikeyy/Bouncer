@@ -28,6 +28,10 @@ public class PlatformSpawner : MonoBehaviour
     IEnumerator SpawnPlatform()
     {
         while (true) {
+            if (gm.playerHasDied)
+            {
+                break;
+            }
             GameObject newPlatform = Instantiate(platform, new Vector3(gameObject.transform.position.x, Random.Range(-2.5f, 2.5f), 0), Quaternion.identity);
             yield return new WaitForSeconds(timeDelay); ;
         }

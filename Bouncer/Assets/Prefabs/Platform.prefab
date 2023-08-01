@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectTag: Player
+  gm: {fileID: 0}
 --- !u!1 &6481740974947329696
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,3 +348,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectTag: Player
+  gm: {fileID: 0}

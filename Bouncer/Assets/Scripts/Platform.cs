@@ -10,6 +10,7 @@ public class Platform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("HELLO");
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }

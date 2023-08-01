@@ -11,7 +11,7 @@ public class Destroy : MonoBehaviour
     public GameManager gm;
     void Start()
     {
-        
+        gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class Destroy : MonoBehaviour
             if (other.gameObject.tag == "Player") 
             {
                 Debug.Log("True");
-                gm.playerHasDied = true;
+                gm.playeDied();
             }
 
             Destroy(other.gameObject);

@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
     public bool playerHasDied = false;
     public int score = 0;
     public TMP_Text scoreText;
+    public GameOver gameOver;
     // Start is called before the first frame update
     void Start()
     {
-       
     }
 
     // Update is called once per frame
@@ -29,5 +29,12 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+    }
+
+    public void playeDied()
+    {
+        playerHasDied = true;
+        Debug.Log("Dead");
+        gameOver.OnGameOver(score);
     }
 }
